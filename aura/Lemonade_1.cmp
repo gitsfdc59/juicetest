@@ -1,0 +1,81 @@
+<aura:component controller="CreateOrder" >
+    
+     <!-- Define Attribute-->
+    <aura:attribute name="Drink" type="Drink_Order__c" default="{'sobjectType': 'Drink_Order__c',
+                         'Flavor__c': '',
+                         'Size__c': '',
+                         'Price__c': ''
+                       }"/>
+    
+ <nav>
+    <div class="nav-wrapper orange accent-4" >
+      <a class="brand-logo center grey-text text-lighten-5">Lemonade Stand  <i style="font-size:50px;" class="material-icons Large">local_drink</i> </a>
+     </div>
+      </nav>
+    <div class="section white" >
+      <div class="row container">
+          
+        <h5 class="header center">Order Lemon Juice</h5>
+          
+           <div class="card">
+    <div class="card-content" >
+         <div class="row">
+    <form class="col s12">
+ 
+        <div class="row input-field ">
+          <div class="col s2">
+            <i class="material-icons medium">local_drink</i>
+          </div>
+        <div class="col s10">
+            <lightning:input name="input3" type="text" value="{!v.Drink.Flavor__c}" label="Enter Your Flavour Name"  />
+        </div>
+            </div>
+        
+         <div class="row input-field ">
+          <div class="col s2">
+            <i class="material-icons medium">equalizer</i>
+          </div>
+        <div class="col s10">
+            <lightning:input value="{!v.Drink.Size__c}" label="Which Size Medium / Small / Large"  />
+        </div>
+            </div>
+           
+           <div class="row input-field ">
+          <div class="col s2">
+            <i class="material-icons medium">attach_money</i>
+          </div>
+        <div class="col s10">
+            
+            <lightning:input value="{!v.Drink.Price__c}" label="Enter The Price Of Juice"  />
+        </div>
+            </div>
+         
+          
+      
+        <div class="row center">
+          
+            <lightning:button class="btn waves-effect waves-light orange accent-4" variant="base" label="Submit Your Order" title="Base action" onclick="{!c.create }" />
+            
+          </div> 
+    </form>
+  </div>
+    </div>
+  </div>
+         
+        </div>
+         </div>
+   
+        <div class="fixed-action-btn">
+  <a class="btn-floating btn-large orange">
+    <i class="large material-icons">home</i>
+  </a>
+  <ul>
+    <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+    <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+    <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+    <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+  </ul>
+</div>
+       
+  
+</aura:component>

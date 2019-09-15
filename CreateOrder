@@ -1,0 +1,18 @@
+public with sharing class CreateOrder {
+
+    @AuraEnabled
+    public static void PlaceOrder (Drink_Order__c Drink){
+        
+        try{
+            System.debug('CreateOrder::PlaceOrder::Drink'+Drink);
+            
+            if(Drink != null){
+                insert Drink;
+            }
+            
+        } catch (Exception ex){
+            
+        }
+        
+    }    
+}

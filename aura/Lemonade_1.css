@@ -1,0 +1,15 @@
+.THIS p {
+    Font-size:50px;
+}
+
+.THIS .card
+{
+    border-top:5px solid #fb8c00;
+    border-radius:10px;
+    padding:20px;
+    height:410px;
+}
+.THIS button
+{
+    margin:25px;
+}
